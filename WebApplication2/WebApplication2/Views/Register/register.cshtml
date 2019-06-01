@@ -1,0 +1,26 @@
+﻿
+@{
+	ViewBag.Title = "Register";
+	Layout = "";
+}
+
+@Styles.Render("~/Content/Register/register")
+
+<div class="content-wrapper">
+	<div class="content-container" data-bind="with: registerViewModel">
+		<div class="login-container">
+			<img src="~/Images/logo.jpg" height="200" width="200" />
+			<input class="input-field" data-bind="value: firstName" type="text" placeholder="First Name" />
+			<input class="input-field" data-bind="value: lastName" type="text" placeholder="Last Name" />
+			<input class="input-field" data-bind="value: username" type="text" placeholder="Username" />
+			<input class="input-field" data-bind="value: password" type="password" placeholder="Password" />
+			<input class="input-field" data-bind="value: repeatPassword" type="password" placeholder="Repeat Password" />
+			<input class="submit-btn" type="submit" onclick="registerUser()" />
+		</div>
+	</div>
+</div>
+
+@Scripts.Render("~/bundles/jquery");
+@Scripts.Render("~/bundles/knockout")
+@Scripts.Render("~/Scripts/Register/register")
+

@@ -1,0 +1,25 @@
+﻿
+@{
+	ViewBag.Title = "Login";
+	Layout = "";
+}
+
+@Styles.Render("~/Content/Login/login")
+
+<div class="content-wrapper">
+	<div class="content-container" data-bind="with: loginViewModel">
+		<div class="login-container">
+			<img src="~/Images/logo.jpg" height="200" width="200" />
+			<input class="input-field" data-bind="value: username" type="text" placeholder="Username" />
+			<input class="input-field" data-bind="value: password" type="password" placeholder="Password" />
+			<input class="submit-btn" type="submit" onclick="login()" />
+		</div>
+		<div class="login-links">
+			<a class="aslink" onclick="register()">Register</a>
+		</div>
+	</div>
+</div>
+
+@Scripts.Render("~/bundles/jquery");
+@Scripts.Render("~/bundles/knockout")
+@Scripts.Render("~/Scripts/Login/login")
